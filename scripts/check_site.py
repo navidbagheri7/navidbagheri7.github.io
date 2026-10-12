@@ -57,9 +57,11 @@ def main():
     for font in re.findall(r'url\([\'\"]?([^\)\'\"]+)', (ROOT/'styles.css').read_text()):
         assert (ROOT/font).is_file(), font
     repository_text = (ROOT/'repositories.html').read_text()
-    for slug in ['learning-generalization-lab','certified-optimization-lab','sequential-decision-lab','diffusion-flow-lab','sampling-energy-lab','information-theory-lab']:
+    for slug in ['Diffusion-Models', 'Reinforcement-Learning', 'Machine-Learning-and-Deep-Learning', 'MCMC-and-Energy-Based-Models', 'Convex-Optimization', 'Information-Theory']:
         assert 'https://github.com/navidbagheri7/'+slug in repository_text
         assert 'https://navidbagheri7.github.io/'+slug+'/' in repository_text
+    titles = ['Diffusion Models', 'Reinforcement Learning', 'Machine Learning and Deep Learning', 'MCMC and Energy-Based Models', 'Convex Optimization', 'Information Theory']
+    assert re.findall(r'<h3[^>]*>([^<]+)</h3>', repository_text) == titles, 'Unexpected project-card order'
     assert (ROOT/'assets/navid-bagheri-shouraki-cv.pdf').read_bytes().startswith(b'%PDF-')
     assert (ROOT/'.nojekyll').exists()
     print(f'Validated {len(documents)} pages, {count} local references, font files and six lab links.')

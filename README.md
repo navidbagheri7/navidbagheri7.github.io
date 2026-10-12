@@ -55,3 +55,5 @@ The upper-left header uses the full name in black sans-serif with no tagline. Ed
 The homepage uses the supplied `photo_5935805993654620536_w.jpg`, copied to `assets/navid-portrait.jpg`. The portrait sits to the right of the introduction on desktop and stacks above it on narrow screens. CSS controls the visible framing without modifying the original photograph. The palette combines navy accents, light blue panels, and restrained teal details on a white background.
 
 MBZUAI Winter School is listed under Workshops and schools, separate from honors and awards. The date remains 2026 as documented in the CV; participation is described as selection rather than assumed attendance.
+
+The six project cards use subject names and are ordered Diffusion, Reinforcement Learning, Machine Learning and Deep Learning, MCMC, Convex Optimization, and Information Theory. The old lab URLs contain small redirects to preserve bookmarked demonstrations after the repository renames.
