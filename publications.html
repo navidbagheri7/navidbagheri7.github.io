@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Selected publications by Navid Bagheri Shouraki on diffusion guidance, generative modeling, and inverse problems.">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="canonical" href="https://navidbagheri7.github.io/publications.html">
+  <meta property="og:url" content="https://navidbagheri7.github.io/publications.html">
+  <meta property="og:image" content="https://navidbagheri7.github.io/assets/navid-portrait.jpg">
+  <meta property="og:image:alt" content="Navid Bagheri Shouraki">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Publications · Navid Bagheri Shouraki">
+  <meta property="og:description" content="Selected publications by Navid Bagheri Shouraki on diffusion guidance, generative modeling, and inverse problems.">
+  <title>Publications · Navid Bagheri Shouraki</title>
+  <link rel="icon" href="assets/favicon.svg?v=nbs-blue-3" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=11">
+  <script src="script.js?v=7" defer></script>
+  <noscript><style>.theme-toggle,.track-controls{display:none}</style></noscript>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><div class="header-inner">
+    <a class="brand" href="index.html" aria-label="Navid Bagheri Shouraki, home"><span class="brand-name">Navid <span class="surname">Bagheri Shouraki</span></span></a>
+    <nav aria-label="Main navigation"><a href="index.html">Home</a><a href="publications.html" aria-current="page">Publications</a><a href="academic.html">Academic</a><a href="repositories.html">Repositories</a><a href="contact.html">Contact</a></nav>
+    <div class="header-actions"><a class="cv-link" href="assets/navid-bagheri-shouraki-cv.pdf" target="_blank" rel="noopener noreferrer">CV <span aria-hidden="true">↗</span></a><button class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false"><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20.4 14.2A8.7 8.7 0 0 1 9.8 3.6a8.8 8.8 0 1 0 10.6 10.6Z" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button></div>
+  </div></header>
+  <main id="main" class="wrap"><header class="page-heading"><p class="eyebrow">Research</p><h1>Publications</h1><p class="page-description">Research on diffusion guidance, generative modeling, and inverse problems.</p></header><div class="research-toolbar"><a class="text-link" href="https://scholar.google.com/citations?user=TG-DC7UAAAAJ" target="_blank" rel="noopener noreferrer">Google Scholar <span aria-hidden="true">↗</span></a></div>      <div class="publication-list">
+        <article class="publication" aria-labelledby="pub-uniguide">
+          <div class="paper-body"><div class="paper-meta"><span class="venue">ICLR 2026 · ReALM-GEN Workshop</span><span class="paper-year">2026</span></div><h2 id="pub-uniguide">UniGuide: Learning Guidance Policies for Multi-Objective Diffusion Sampling</h2><p class="authors"><strong>Navid Bagheri Shouraki<sup class="author-marker">*</sup></strong>, M. Hegazy<sup class="author-marker">*</sup>, E. Moulines, A. Dieuleveut, M. I. Jordan, Y. Janati</p><p class="contribution-note"><span aria-hidden="true">*</span> Equal contribution.</p><p class="paper-summary">A preference-conditioned policy that adapts guidance during sampling to balance condition alignment and diversity, with a frozen diffusion backbone.</p><div class="paper-links"><a href="https://openreview.net/pdf/e98a1be6111695a53e21d1da3f85beec1dd04c27.pdf" target="_blank" rel="noopener noreferrer">Paper <span aria-hidden="true">↗</span></a><details><summary>Abstract overview <span aria-hidden="true">+</span></summary><p>A fixed classifier-free guidance scale cannot adapt to how the balance between condition alignment, realism, and diversity changes during sampling. UniGuide formulates guidance as a sequential decision problem and learns a preference-conditioned policy that selects separate guidance parameters for the denoised estimate and the noise residual.</p><p>The policy uses compact features describing the solver context, denoiser agreement, and changes in guidance effects. A preference vector lets the same policy explore different alignment–diversity trade-offs at inference time, without manual schedule design or retraining the diffusion backbone. Evaluation includes held-out alignment and diversity measures.</p></details></div></div>
+        </article>
+        <article class="publication" aria-labelledby="pub-ding">
+          <div class="paper-body"><div class="paper-meta"><span class="venue">ICLR 2026</span><span class="paper-year">2026</span></div><h2 id="pub-ding">Efficient Zero-Shot Inpainting with Decoupled Diffusion Guidance</h2><p class="authors">B. Moufad, <strong>Navid Bagheri Shouraki</strong>, A. O. Durmus, T. Hirtz, E. Moulines, J. Olsson, Y. Janati</p><p class="paper-summary">Zero-shot inpainting through a decoupled likelihood correction, with closed-form Gaussian updates and no backpropagation through the frozen denoiser.</p><div class="paper-links"><a href="https://arxiv.org/abs/2512.18365" target="_blank" rel="noopener noreferrer">arXiv <span aria-hidden="true">↗</span></a><a href="https://github.com/YazidJanati/ding" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a><details><summary>Abstract overview <span aria-hidden="true">+</span></summary><p>Standard diffusion posterior guidance differentiates an observation likelihood through the denoiser at every reverse step, adding substantial memory and runtime costs. DING instead evaluates the denoiser at an auxiliary reverse sample, decoupling its input from the state being corrected by the observation likelihood.</p><p>For masked linear observations, this likelihood surrogate yields a closed-form Gaussian update: missing coordinates follow the reference transition, while observed coordinates receive a likelihood correction. The Gaussian update is exact for the surrogate conditional, rather than the true posterior transition. The method is evaluated on zero-shot inpainting under practical compute and memory budgets.</p></details></div></div>
+        </article>
+        <article class="publication" aria-labelledby="pub-editing">
+          <div class="paper-body"><div class="paper-meta"><span class="venue">ICLR 2026 · ReALM-GEN Workshop</span><span class="paper-year">2026</span></div><h2 id="pub-editing">When Test-Time Guidance Is Enough: Fast Image and Video Editing with Diffusion Guidance</h2><p class="authors">A. Ghorbel, B. Moufad, <strong>Navid Bagheri Shouraki</strong>, A. O. Durmus, T. Hirtz, E. Moulines, J. Olsson, Y. Janati</p><p class="paper-summary">Studying the decoupled guidance approximation and extending training-free posterior sampling to large-scale image and video editing.</p><div class="paper-links"><a href="https://arxiv.org/abs/2602.14157" target="_blank" rel="noopener noreferrer">arXiv <span aria-hidden="true">↗</span></a><a href="https://github.com/ahmedgh970/ding-editor" target="_blank" rel="noopener noreferrer">Code <span aria-hidden="true">↗</span></a><a href="https://ahmedgh970.github.io/ding-editor/" target="_blank" rel="noopener noreferrer">Project <span aria-hidden="true">↗</span></a><details><summary>Abstract overview <span aria-hidden="true">+</span></summary><p>This follow-up studies the approximation behind DING and extends its guidance principle to large-scale image and video editing. Text-conditioned edits are formulated through masked inpainting, combining a pretrained generative prior with a correction based on the observed content.</p><p>The approach applies guidance at inference time, without backpropagating through the frozen denoiser. This extends zero-shot inpainting to image and video editing without task-specific model training.</p></details></div></div>
+        </article>
+      </div></main>
+  <footer class="site-footer wrap"><span>© <span id="copyright-year">2026</span> Navid Bagheri Shouraki</span><span>Paris, France</span><a href="contact.html">Get in touch <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>
